@@ -9,6 +9,6 @@ func Hello(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("name is empty")
 	}
-	message := fmt.Sprintf("hello, %v, weclome!", name)
+	message := fmt.Sprintf("hello twice, %v, weclome!", name)
 	return message, nil
 }
