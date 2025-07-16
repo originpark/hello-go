@@ -10,11 +10,11 @@ func Hello(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("name is empty")
 	}
-	message := fmt.Sprintf("hello twice, %v, weclome!", name)
+	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
 }
 
-func RandomFormat() string {
+func randomFormat() string {
 	formats := []string{
 		"Hi, %v. Welcome!",
 		"Once you're looking for, %v.",
