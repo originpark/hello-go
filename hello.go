@@ -3,6 +3,7 @@ package hello_go
 import (
 	"errors"
 	"fmt"
+	"math/rand"
 )
 
 func Hello(name string) (string, error) {
@@ -11,4 +12,14 @@ func Hello(name string) (string, error) {
 	}
 	message := fmt.Sprintf("hello twice, %v, weclome!", name)
 	return message, nil
+}
+
+func RandomFormat() string {
+	formats := []string{
+		"Hi, %v. Welcome!",
+		"Once you're looking for, %v.",
+		"Great to see you how are you?",
+	}
+
+	return formats[rand.Intn(len(formats))]
 }
